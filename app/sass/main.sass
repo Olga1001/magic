@@ -1,0 +1,684 @@
+@import "fonts"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #ffffff
+	font-size: 14px
+	line-height: 53.8px
+	opacity: 1
+	background: none
+	border: none
+	border-bottom: 1px solid rgba($white, 0.2)
+
+*:-moz-placeholder
+	color: #ffffff
+	font-size: 14px
+	line-height: 53.8px
+	opacity: 1
+
+*::-moz-placeholder
+	color: #ffffff
+	font-size: 14px
+	line-height: 53.8px
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #ffffff
+	font-size: 14px
+	line-height: 53.8px
+	opacity: 1
+
+input[type=text]::-ms-clear
+	display: none
+	width : 0
+	height: 0
+input[type=text]::-ms-reveal
+	display: none
+	width : 0
+	height: 0
+::-webkit-scrollbar
+	width: 10px
+	height: 3px
+::-webkit-scrollbar-thumb
+	background: #ccc
+input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-webkit-search-results-button, input::-webkit-search-results-decoration
+	display: none
+	-webkit-appearance: none
+input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-webkit-search-results-button, input::-webkit-search-results-decoration
+	display: none
+	-webkit-appearance: none
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #d4dae1
+body input:required:valid,
+body textarea:required:valid
+	font-size: 14.94px
+	font-family: "LatoBold", sans-serif
+	text-transform: capitalize
+body
+	font-family: "AvantGardeGothicc-R"
+textarea
+	width: 100%
+	height: 100px
+	margin: 0px
+	border: none
+	resize: none
+	border-bottom: 2px solid #e0e2e4
+	color: #979ba7
+	font-size: 14.94px
+	font-family: "LatoRegular", sans-serif
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+	margin: 0
+	padding: 0
+	border: 0
+	font-size: 100%
+	font: inherit
+	vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+	display: block
+h1
+	font-size: 67.75px
+	font-family: "BlissProBold", sans-serif
+	line-height: 57.78px
+	margin-top: 53px
+ol, ul
+	list-style: none
+
+blockquote, q
+	quotes: none
+.overlay, .overlay-write-us
+	z-index: 2
+	position: fixed
+	background: rgba(72, 80, 99, 0.8)
+	width: 100%
+	height: 100vh
+	cursor: pointer
+	left: 0
+	top: 0
+	opacity: 0
+	pointer-events: none
+	transition: opacity .5s ease
+	&.active
+		opacity: 1
+		pointer-events: auto
+input
+	background: none
+	border: none
+	border-bottom: 1px solid rgba($white, 0.2)
+	width: 100%
+	padding: 16px 0
+	margin-top: 20px
+	cursor: url(../img/svg/ellipse-layers.svg) 40 40, default
+	color: #ffffff
+	font-size: 14px
+	text-transform: capitalize
+	&:focus
+		outline: none
+blockquote:before, blockquote:after, q:before, q:after
+	content: ''
+	content: none
+a
+	outline: none
+	text-decoration: none
+	color: #ffffff
+	cursor: url('../img/svg/ellipse-layers.svg') 20 20, default
+	font-family: "AvantGardeGothicc-R"
+p
+	font-size: 16px
+	line-height: 23.91px
+	font-family: 'AvantGardeGothicc-R'
+.row
+	display: flex
+.wrap
+	position: relative
+	background: $bg-fon
+	min-height: 100vh
+	overflow: hidden
+	cursor: url('../img/svg/ellipse.svg') 40 40, default
+	padding-bottom: 100px
+//header
+.header
+	position: relative
+	z-index: 9
+	padding: 40px 50px
+	width: 100%
+.menu-item
+	letter-spacing: 2.59px
+.header.active
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+.row-header
+	justify-content: space-between
+.menu
+	display: flex
+	font-family: "AvantGardeGothicc-R"
+	font-size: 12.95px
+	text-transform: uppercase
+	color: $white
+.logo img
+	width: 100px
+.block-menu
+	display: flex
+	align-items: center
+.menu-item
+	margin-left: 50px
+	a:hover
+		opacity: 0.5
+		transition: all 1s ease
+
+//home
+.home
+	position: relative
+	height: 100%
+	transition: all 1s ease
+	pointer-events: auto
+	//margin-bottom: 140px
+	&.active
+		opacity: 0
+		pointer-events: none
+	&.mb-active
+		margin-bottom: 245px
+.light
+	position: absolute
+	height: 10px
+	top: 50%
+	left: 50%
+	border-radius: 50%
+	box-shadow: 0 0 500px rgba($white, 0.1)
+
+.slider-img
+	float: left
+	width: 100%
+	max-width: 980px
+	max-height: 460px
+	height: 100%
+	margin: 0 auto
+	position: relative
+	transition: all 0.2s ease
+	img
+		opacity: 0.5
+		max-height: 460px
+		height: 100%
+		object-fit: cover
+		width: 100%
+		display: block
+	.hide-img
+		opacity: 0.5
+		z-index: 3
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		transition: all 0.7s ease
+		transform-origin: left top
+		&.open
+
+.title
+	width: 490px
+	position: absolute
+	left: 100px
+	bottom: 0
+	line-height: 53.8px
+	z-index: 3
+	a
+		color: $white
+		font-family: "PlayfairDisplay-R"
+		font-size: 60px
+		line-height: 53.8px
+		border-bottom: 2px solid #5f6169
+.title-animate-one
+	transition: all 0.5s ease
+	transform: translateY(160px)
+	opacity: 0
+	&.active
+		opacity: 1
+		transform: translateY(115px)
+.title-animate-two
+	transition: all 1s ease
+	transform: translateY(160px)
+	opacity: 0
+	&.active
+		opacity: 1
+		transform: translateY(115px)
+
+.slider
+	width: 100%
+.slider-item
+	position: relative
+	opacity: 0.1
+	cursor: url('../img/svg/ellipse-layers.svg') 40 40, default
+	margin: 0 75px
+	outline: none
+	transition: all 0.5s ease
+	box-shadow: 0 -180px 600px rgba(255, 255, 255, 0.1)
+
+.slick-active
+	opacity: 1
+
+.bg-item
+	position: absolute
+	width: 980px
+	height: 249px
+	background-color: #181d29
+	pointer-events: none
+	z-index: -1
+	bottom: -40px
+	left: 40px
+	transition: all .5s ease
+	&.active
+		left: 0
+		top: 0
+		transform: scale(3, 7)
+		z-index: 2
+.slick-prev, .slick-next
+	z-index: 8
+	width: 300px
+	height: 100%
+	opacity: 0
+.slick-prev
+	left: 0
+	&:hover
+		cursor: url('../img/svg/circle-arrow-left.svg') 40 40, default
+.slick-next
+	right: 0
+	&:hover
+		cursor: url('../img/svg/circle-arrow-right.svg') 40 40, default
+
+//animate
+.slider.active
+	position: absolute
+	top: 0
+	left: 0
+	height: 100%
+.home.active-animate
+	position: initial
+.slick-active.active
+	margin: 0
+.slick-arrow.active
+	display: none
+.slider-img
+	img.active
+		margin: 0
+//service
+.service
+	position: absolute
+	left: 0
+	top: 0
+	height: 100%
+	opacity: 0
+	padding: 200px 100px
+	width: 100%
+	pointer-events: none
+	background: url(../img/magic-consierge/lawyer-attorney/service.png) no-repeat
+	background-size: 100% 100%
+
+.row-left
+	z-index: 2
+.service.active
+	opacity: 1
+	height: 100%
+	pointer-events: auto
+.container-service
+	display: flex
+	justify-content: space-between
+	margin-bottom: 50px
+	.row-right
+		max-width: 400px
+		width: 100%
+		color: #adb0b8
+		text-align: right
+.service-menu
+	font-family: "PlayfairDisplay-R"
+	font-size: 4.45vh
+	font-weight: 400
+	li
+		line-height: 1.35
+	a
+		font-family: "PlayfairDisplay-R"
+		border-bottom: 2px solid #5f6169
+		&:hover
+			opacity: 0.1
+
+//content-one
+.content-one
+	opacity: 0
+	height: 0
+	transition: all 1s ease
+	pointer-events: none
+.content-one.active
+	opacity: 1
+	height: 100%
+	transition: all 1s ease
+	pointer-events: auto
+.bg-content
+	background: #181d29
+	width: 100%
+	height: 100%
+	position: absolute
+	top: 0
+	left: 0
+	transform: translate(0%, 15%) scale(0.75, 0.3)
+	transition: all 1s ease
+	z-index: 1
+.bg-content.active
+	transition: all 1s ease
+	transform: scale(1, 1)
+	z-index: 1
+.img-content
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	max-width: 980px
+	transform: scale(0.9, 0.8) matrix(1, 0, 0, 1, 278, 108)
+	transition: all 1s ease
+	z-index: 2
+.img-content.active
+	transition: all 1s ease
+	transform: scale(1, 1) matrix(1,0,0,1,0,0)
+	max-height: calc(100%)
+.form
+	height: 100%
+	position: relative
+	z-index: 3
+.forms.active
+	opacity: 1
+	transform: translateX(0%)
+	transition: all 1s ease
+.form-order
+	padding: 50px 70px
+	transform: translateY(50%)
+	transition: all 3s ease
+	&.active
+		opacity: 1
+		transform: translateY(0px)
+
+.forms
+	opacity: 0
+	position: absolute
+	right: 0
+	bottom: 0
+	background: #1b202d
+	max-width: 777px
+	width: 100%
+	height: 100%
+	max-height: 762px
+	z-index: 3
+	padding: 50px 70px
+	transform: translateX(-100%)
+	transition: all 1s ease
+	.arrow-back
+		padding: 10px
+		border-radius: 50px
+		width: 40px
+		transition: all 3s ease
+		transform: translateX(20px)
+		&.active
+			transform: translateX(0px)
+		img
+			width: 20px
+			height: 10px
+		&:hover
+			padding: 9px
+			border: 1px solid $gold
+	.form-title
+		width: 100%
+		max-width: 444px
+		color: #ffffff
+		line-height: 53.8px
+		margin-top: 45px
+		transition: all 1s ease
+		a
+			cursor: url('../img/svg/ellipse.svg') 40 40, default
+			font-family: "PlayfairDisplay-R"
+			font-size: 60px
+			border-bottom: 2px solid #5f6169
+	.form-text
+		width: 100%
+		max-width: 595px
+		color: #ffffff
+		font-family: "AvantGardeGothicc-R"
+		font-size: 15px
+		font-weight: 400
+		margin-top: 40px
+		line-height: 23.91px
+		transition: all 2s ease
+		transform: translateY(40px)
+		opacity: 0
+		&.active
+			opacity: 1
+			transform: translateY(0px)
+	.btn
+		margin-top: 55px
+		padding: 14px 0
+		text-align: center
+		width: 170px
+		border-radius: 23px
+		border: 1px solid $gold
+		color: $gold
+		font-family: "AvantGardeGothicc-R"
+		font-size: 14px
+		cursor: url(../img/svg/ellipse-layers.svg) 40 40, default
+		transition: all 0.1s ease
+		&:hover
+			background: #E0BA8A
+			color: $white
+			transition: all 0.1s ease
+	.form-one.active
+		opacity: 0
+		height: 0
+	.form-two, .form-tree
+		opacity: 0
+		height: 0
+		transition: all 1s ease
+		.form-title
+			font-family: "PlayfairDisplay-R"
+			font-size: 34px
+			border-bottom: 2px solid #5f6169
+			width: 100%
+			max-width: 500px
+			line-height: 53.8px
+			transition: all 1s ease
+		.title-two, .title-tree
+			transition: all 1s ease
+			transform: translateY(30px)
+			opacity: 0
+	.form-two.active, .form-tree.active
+		opacity: 1
+		height: 100%
+	.close
+		padding: 12px 14px 10px
+		border-radius: 50px
+		width: 44px
+		transition: all 0.1s ease
+		img
+			width: 16px
+			height: 16px
+		&:hover
+			padding: 11px 13px 9px
+			border: 1px solid $gold
+	.form-content
+		margin-top: 15px
+		display: block
+		width: 100%
+		max-width: 330px
+	.request
+		color: #deb985
+		font-family: "AvantGardeGothicc-R"
+		font-size: 16px
+		font-weight: 400
+		line-height: 23.91px
+		margin-top: 20px
+		opacity: 0
+		transform: translateY(30px)
+		transition: all 1.5s ease
+		&.active
+			transform: translateY(0px)
+			opacity: 1
+	.title-one
+		transition: all 1s ease
+		transform: translateY(30px)
+		opacity: 0
+	.input-one
+		transition: all 1.5s ease
+		transform: translateY(30px)
+		opacity: 0
+	.input-two
+		transition: all 1.8s ease
+		transform: translateY(30px)
+		opacity: 0
+	.input-tree
+		transition: all 2s ease
+		transform: translateY(30px)
+		opacity: 0
+	.title-one.active, .title-two.active, .title-tree.active, .input-one.active, .input-two.active, .input-tree.active
+		opacity: 1
+		transform: translateY(0px)
+//contacts
+.contacts
+	background: #000
+	opacity: 0
+	height: 100%
+	width: 100%
+	pointer-events: none
+	position: absolute
+	left: 0
+	top: 0
+	&.active
+		opacity: 1
+		height: 100%
+		//display: block
+		pointer-events: auto
+.contacts-shadow
+	width: 780px
+	height: 100%
+	position: absolute
+	top: 0
+	right: 0
+	z-index: 1
+	background-image: linear-gradient(to right, rgba(19, 22, 35, 0) 0%, #131723 100%)
+#map
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	min-height: 100vh
+	height: 100%
+	box-shadow: inset 0 0 60px rgba(#000, 0.5)
+.contacts-info
+	font-family: "AvantGardeGothicc-R"
+	position: absolute
+	top: 190px
+	right: 100px
+	color: $white
+	text-align: right
+	z-index: 1
+	.phone, .address
+		color: #adb0b8
+		margin-bottom: 20px
+		font-size: 16px
+	.email
+		a
+			border-bottom: 1px solid #ffffff
+			font-size: 16px
+	.document
+		margin-top: 30px
+		cursor: url(../img/svg/ellipse-layers.svg) 40 40, default
+		a
+			border-bottom: 1px solid #ffffff
+
+.overlay
+	opacity: 0
+	position: absolute
+	top: 0
+	left: 0
+	background: rgba(0,0,0,0.8)
+	width: 100%
+	min-height: 100vh
+	height: 100%
+	padding: 50px 0
+	&.active
+		opacity: 1
+		z-index: 9
+.documets-close
+	font-size: 0
+	position: absolute
+	right: 52px
+	top: 52px
+	padding: 11px
+	cursor: url(../img/svg/ellipse.svg) 40 40, default
+	img
+		width: 16px
+		height: 16px
+	&:hover
+		background: none
+		padding: 10px
+		border: 1px solid $gold
+		border-radius: 50px
+.slider-documets
+	width: 100%
+	position: relative
+	top: 50px
+	margin: 0 auto
+	.slick-slide
+		opacity: 1
+		outline: none
+		img
+			margin: 0 auto
+			width: 600px
+			max-width: 100%
+
+.slider-documets
+	cursor: url(../img/svg/ellipse.svg) 40 40, default
+	outline: none
+	width: 100%
+	&.slick-active
+		opacity: 1
+.documets-item
+	display: block
+	margin: 0 auto
+	width: 600px
+	//width: 100%
+//footer
+
+.footer
+	z-index: 3
+	position: absolute
+	left: 0
+	bottom: 0
+	padding: 50px
+	width: 100%
+	opacity: 0.5
+	color: #a6aab6
+	font-family: "AvantGardeGothicc-R"
+	font-size: 13px
+	font-weight: 400
+	line-height: 23.91px
+	.row
+		justify-content: space-between
+	img
+		margin-left: 7px
+.slick-next, .slick-prev
+	cursor: none
+.slick-list
+	overflow: visible
+.slider.pointer-none
+	pointer-events: none
+.slider
+	pointer-events: auto
+@import "media"
+
