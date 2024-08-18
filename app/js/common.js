@@ -106,6 +106,8 @@ $(document).ready(function () {
     });
     $(".arrow-back").click(function () {
         var staticwidth = $('.hide-img.close').width();
+        var staticPadding = $('.slider-item.close').css('padding-top');
+        
         $('.hide-img.open').css({"transform":"translate(0, 0)", "width": staticwidth});
         $('.slider').removeClass('pointer-none');
         setTimeout(function(){
